@@ -21,6 +21,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
+        // Please replace target url with your own backend URL.
+        // I already remove all permission from public access.
         target: 'https://directus-production-3751.up.railway.app',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
